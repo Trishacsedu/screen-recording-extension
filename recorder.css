@@ -1,0 +1,91 @@
+:root {
+  color-scheme: light dark;
+  --accent: #2563eb;
+  --danger: #dc2626;
+}
+
+body {
+  margin: 0;
+  font: 14px/1.5 system-ui, sans-serif;
+}
+
+main {
+  padding: 16px 20px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0 0 16px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hint {
+  margin: 4px 0;
+  opacity: 0.75;
+  font-size: 13px;
+}
+
+button {
+  padding: 10px;
+  font: inherit;
+  border-radius: 6px;
+  border: 1px solid #8884;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+button.danger {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: white;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--danger);
+  animation: blink 1s infinite;
+}
+
+.paused .dot {
+  animation: none;
+  opacity: 0.4;
+}
+
+@keyframes blink {
+  50% { opacity: 0.2; }
+}
+
+video {
+  width: 100%;
+  border-radius: 6px;
+  background: black;
+}
+
+.error {
+  color: var(--danger);
+}

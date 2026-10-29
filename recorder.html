@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Screen Recorder</title>
+  <link rel="stylesheet" href="recorder.css">
+</head>
+<body>
+  <main>
+    <h1>Screen Recorder</h1>
+
+    <section id="setup">
+      <label class="option">
+        <input type="checkbox" id="systemAudio" checked>
+        Record tab / system audio
+      </label>
+      <label class="option">
+        <input type="checkbox" id="micAudio">
+        Record microphone
+      </label>
+      <p class="hint">
+        To include DevTools, pick <strong>Entire screen</strong> or the
+        <strong>Chrome window</strong> in the next step.
+      </p>
+      <button id="startBtn" class="primary">Choose screen &amp; start</button>
+    </section>
+
+    <section id="recording" hidden>
+      <div class="status"><span class="dot"></span> Recording <span id="timer">00:00</span></div>
+      <button id="pauseBtn">Pause</button>
+      <button id="stopBtn" class="danger">Stop</button>
+    </section>
+
+    <section id="result" hidden>
+      <video id="preview" controls></video>
+      <button id="downloadBtn" class="primary">Download</button>
+      <button id="newBtn">New recording</button>
+    </section>
+
+    <p id="error" class="error" hidden></p>
+  </main>
+  <script src="recorder.js"></script>
+</body>
+</html>

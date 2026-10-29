@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Screen Recorder",
+  "version": "1.0.0",
+  "description": "Record your entire screen, a window (including DevTools), or a tab, with optional microphone audio.",
+  "action": {
+    "default_title": "Open Screen Recorder"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": []
+}
